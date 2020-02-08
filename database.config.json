@@ -1,0 +1,15 @@
+{
+  "db": {
+    "mysql": {
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "root",
+      "password": "password",
+      "database": "musketeer_db",
+      "entities": [
+        "./entities/*.ts"
+      ]
+    }
+  }
+}
