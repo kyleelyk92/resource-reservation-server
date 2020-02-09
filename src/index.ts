@@ -1,10 +1,12 @@
+import "reflect-metadata";
 import App from './app';
-import RoomController from '../controllers/room.controller';
-import HttpController from '../controllers/HttpController';
+import RoomController from './controllers/room.controller';
+import AppController from './controllers/AppController';
+
 
 const app = new App(
   [
-    new HttpController(),
+    new AppController(),
     new RoomController(),
   ],
   5000,

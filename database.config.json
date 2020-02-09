@@ -8,7 +8,7 @@
       "password": "password",
       "database": "musketeer_db",
       "entities": [
-        "./entities/*.ts"
+        "src/entity"
       ]
     }
   }

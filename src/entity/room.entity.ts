@@ -1,17 +1,17 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class Room {
+export default class Room {
 
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column('int')
   roomNumber?: number;
 
-  @Column()
+  @Column('text')
   roomName?: string;
 
-  @Column()
+  @Column('date')
   createdAt: Date;
 }

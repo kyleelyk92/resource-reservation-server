@@ -1,8 +1,8 @@
-import DbConnection from '../src/dbconnection';
+import DbConnection from '../dbconnection';
 import { Connection } from 'typeorm';
 import * as express from 'express';
 
-export default class HttpController {
+export default class AppControlller {
   public path = '/';
   public router = express.Router();
 
@@ -16,4 +16,6 @@ export default class HttpController {
       this.db = c;
     });
   }
+
+
 }
