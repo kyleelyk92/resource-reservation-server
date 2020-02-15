@@ -15,7 +15,7 @@ export class DbConnection {
       username: dbconfig.db.mysql.username,
       password: dbconfig.db.mysql.password,
       database: dbconfig.db.mysql.database,
-      entities: ['./entity/*.js'],
+      entities: ['src/entity/*.js'],
       synchronize: true,
     });
     return connection;
