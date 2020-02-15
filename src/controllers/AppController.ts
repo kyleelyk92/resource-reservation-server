@@ -1,4 +1,4 @@
-import DbConnection from '../dbconnection';
+import { DbConnection } from '../dbconnection';
 import { Connection } from 'typeorm';
 import * as express from 'express';
 
@@ -16,6 +16,4 @@ export default class AppControlller {
       this.db = c;
     });
   }
-
-
 }
