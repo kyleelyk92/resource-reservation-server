@@ -1,9 +1,9 @@
-import AppController from './AppController';
+import { AppController } from './index';
 import * as express from 'express';
 import Room from '../entity/Room.entity';
 import { Request, Response } from 'express';
 
-export default class RoomController extends AppController {
+export class RoomController extends AppController {
   public path = '/rooms';
   public router = express.Router();
 
@@ -19,11 +19,6 @@ export default class RoomController extends AppController {
       const saved_room = this.db.getRepository(Room).save(req.body);
       return res.send(saved_room);
     });
-
-
-    // write a method that takes a list of HttpRoutes with methods and adds them to the router on instantiation
-    // this will keep this code clean and make it more easily extensible, so you just have to add new routes
-    // in order to add new functionality to the controller
   }
 
   getAllRooms(res: express.Response) {

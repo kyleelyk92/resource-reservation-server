@@ -1,7 +1,9 @@
 import "reflect-metadata";
 import App from './app';
-import RoomController from './controllers/room.controller';
-import AppController from './controllers/AppController';
+import {
+  RoomController,
+  AppController
+} from './controllers';
 
 
 const app = new App(

@@ -1,6 +1,6 @@
 import express = require('express');
 import * as bodyParser from 'body-parser';
-import AppController from './controllers/AppController';
+import { AppController } from './controllers';
 
 export default class App {
   public app: express.Application;
@@ -33,10 +33,9 @@ export default class App {
 
   private initializeControllers(controllers: AppController[]) {
     controllers.forEach((controller) => {
-      this.app.use('/', controller.router);
+      this.app.use(controller.path, controller.router);
     });
   }
-
   public listen() {
     this.app.listen(this.port, () => {
       console.log(`App listening on the port ${this.port}`);
