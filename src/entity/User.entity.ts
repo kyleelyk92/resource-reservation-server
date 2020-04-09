@@ -1,17 +1,21 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
+import { Projector } from './projector';
 
 @Entity()
 export default class User {
 
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column('text')
-  firstName: string;
+  firstName!: string;
 
   @Column('text')
-  lastName: string;
+  lastName!: string;
 
   @Column('int')
-  age: number;
+  age!: number;
+
+  @ManyToMany(() => Projector)
+  public projector!: Projector;
 }

@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var typeorm_1 = require("typeorm");
+var projector_1 = require("./projector");
 var User = /** @class */ (function () {
     function User() {
     }
@@ -22,6 +23,9 @@ var User = /** @class */ (function () {
     __decorate([
         typeorm_1.Column('int')
     ], User.prototype, "age");
+    __decorate([
+        typeorm_1.ManyToMany(function () { return projector_1.Projector; })
+    ], User.prototype, "projector");
     User = __decorate([
         typeorm_1.Entity()
     ], User);

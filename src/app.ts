@@ -9,7 +9,6 @@ export default class App {
   constructor(controllers: AppController[], port: number) {
     this.app = express();
     this.port = port;
-
     this.initializeMiddlewares();
     this.initializeControllers(controllers);
   }
