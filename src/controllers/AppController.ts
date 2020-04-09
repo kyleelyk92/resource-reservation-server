@@ -9,7 +9,13 @@ export default class AppControlller {
   public db: Connection;
   constructor() {
     this.makeConnection();
+
+    this.router.get('/', () => 'Hello World');
+    this.router.post('/', (req: express.Request, res: express.Response) => {
+      res.send("Hit the post");
+    })
   }
+
 
   makeConnection() {
     new DbConnection().connection().then(c => {
