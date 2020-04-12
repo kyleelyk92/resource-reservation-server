@@ -6,12 +6,15 @@ export default class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('text')
-  firstName: string;
+  @Column({ 
+    type: 'text',
+    length: 100,
+  })
+  name: string;
 
   @Column('text')
-  lastName: string;
+  email: string;
 
-  @Column('int')
-  age: number;
+  @Column('boolean')
+  isVerified: boolean;
 }
